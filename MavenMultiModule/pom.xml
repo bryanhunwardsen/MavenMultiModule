@@ -4,24 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hunwardsen</groupId>
 	<artifactId>MavenMultiModule</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${version}</version>
 	<packaging>pom</packaging>
 	<name>Maven Multi-Module Project Parent POM</name>
+	<url>hunwardsen.com</url>
+	<description>Sample MultiModulue Maven Project using existing Maven Projects as sub-modules.</description>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+	<modules>
+		<module>../../MavenWeatherTutorial/MavenWeatherTutorial</module>
+		<module>../../MavenWebApp/MavenWebApp</module>
+	</modules>
 	
 	<dependencies>
 		<dependency>
@@ -42,23 +34,60 @@
 			<type>war</type>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
-	<modules>
-		<module>../../MavenWeatherTutorial/MavenWeatherTutorial</module>
-		<module>../../MavenWebApp/MavenWebApp</module>
-	</modules>
-	<url>hunwardsen.com</url>
-	<description>Sample MultiModulue Maven Project using existing Maven Projects as sub-modules.</description>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version>0.0.1-SNAPSHOT</version>
 	</properties>
+
 	<organization>
 		<name>hunwardsen.com</name>
 		<url>hunwardsen.com</url>
 	</organization>
+
 	<scm>
 		<developerConnection>Bryan Hunwardsen</developerConnection>
 		<connection>ssh</connection>
 		<url>hunwardsen.com/source/git/maven/mavenmultimodule</url>
 	</scm>
+
+	<developers>
+		<developer>
+			<id>bryan</id>
+			<name>Bryan Hunwardsen</name>
+			<email>bryan@hunwardsen.com</email>
+			<url>http://www.hunwardsen.com</url>
+			<organization>Hunwardsen.com</organization>
+			<organizationUrl>http://www.hunwardsen.com</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-8</timezone>
+		</developer>
+	</developers>
+	
+	<licenses>
+		<license>
+			<name>Hunwardsen 1.0</name>
+			<url>http://www.hunwardsen.com</url>
+			<distribution>repo</distribution>
+			<comments>A me me me friendly license</comments>
+		</license>
+	</licenses>
+	
 </project>
