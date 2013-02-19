@@ -30,6 +30,35 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>hunwardsen.com</groupId>
+			<artifactId>MavenWeatherTutorial</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hunwardsen.com</groupId>
+			<artifactId>MavenWebApp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 
+	<modules>
+		<module>../../MavenWeatherTutorial/MavenWeatherTutorial</module>
+		<module>../../MavenWebApp/MavenWebApp</module>
+	</modules>
+	<url>hunwardsen.com</url>
+	<description>Sample MultiModulue Maven Project using existing Maven Projects as sub-modules.</description>
+	<properties>
+		<version>0.0.1-SNAPSHOT</version>
+	</properties>
+	<organization>
+		<name>hunwardsen.com</name>
+		<url>hunwardsen.com</url>
+	</organization>
+	<scm>
+		<developerConnection>Bryan Hunwardsen</developerConnection>
+		<connection>ssh</connection>
+		<url>hunwardsen.com/source/git/maven/mavenmultimodule</url>
+	</scm>
 </project>
